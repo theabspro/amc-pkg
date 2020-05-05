@@ -1,4 +1,4 @@
 <?php
 return [
-	'DEV' => env('AMC_PKG', false),
+	'DEV' => env('AMC_PKG_DEV', false),
 ];
