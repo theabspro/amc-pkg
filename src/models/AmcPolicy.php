@@ -26,7 +26,7 @@ class AmcPolicy extends BaseModel {
 
 	public $timestamps = true;
 	protected $fillable =
-		["id", "company_id", "name"]
+		["id", "company_id", "name", "type"]
 	;
 
 	public function getDateOfJoinAttribute($value) {
