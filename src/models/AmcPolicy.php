@@ -37,6 +37,10 @@ class AmcPolicy extends BaseModel {
 		return $this->attributes['date_of_join'] = empty($date) ? NULL : date('Y-m-d', strtotime($date));
 	}
 
+	public function amcAggregateWork() {
+		return $this->belongsToMany('Abs\GigoPkg\AggregateWork', 'amc_aggregate_works', 'amc_policy_id', 'aggregate_work_id');
+	}
+
 	public static function saveFromObject($record_data) {
 		$record = [
 			'Company Code' => $record_data->company_code,
